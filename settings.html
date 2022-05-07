@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+
+
+    <link rel="stylesheet" href="dash.css" />
+    <title>Settings</title>
+</head>
+
+<body>
+    <div class="d-flex" id="wrapper">
+        <!-- Sidebar -->
+        <div class="bg-white" id="sidebar-wrapper">
+            <div class="sidebar-heading text-center py-4 primary-text fs-4 fw-bold text-uppercase border-bottom"><i class="fas fa-user-secret me-2"></i>CSE Restaurant</div>
+            <div class="list-group list-group-flush my-3">
+                <a href="dash.html" class="list-group-item list-group-item-action bg-transparent second-text active"><i
+                    class="fas fa-tachometer-alt me-2"></i>Dashboard</a>
+                <a href="category.html" class="list-group-item list-group-item-action bg-transparent second-text active"><i
+                    class="fa fa-th-list me-2"></i>Categories</a>
+                <a href="table.html" class="list-group-item list-group-item-action bg-transparent second-text active"><i
+                    class="bi bi-box2-fill me-2"></i>Tables</a>
+                <a href="tax.html" class="list-group-item list-group-item-action bg-transparent second-text active"><i
+                class="bi bi-percent me-2"></i>Tax</a>
+                <a href="product.html" class="list-group-item list-group-item-action bg-transparent second-text active"><i
+                    class="fa fa-cutlery me-2"></i>Products</a>
+                <a href="user.html" class="list-group-item list-group-item-action bg-transparent second-text active"><i
+                    class="bi bi-people me-2"></i>Users</a>
+                <a href="order.html" class="list-group-item list-group-item-action bg-transparent second-text active"><i
+                    class="fas fa-marker me-2"></i>Orders</a>
+                <a href="billing.html" class="list-group-item list-group-item-action bg-transparent second-text active"><i
+                    class="fas fa-check me-2"></i>Billing</a>
+                <a href="login.html" class="list-group-item list-group-item-action bg-transparent second-text active"><i
+                    class="bi bi-box-arrow-right me-2"></i>Logout</a>
+
+
+            </div>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <nav class="navbar navbar-expand-lg navbar-light bg-transparent py-4 px-4">
+                <div class="d-flex align-items-center">
+                    <i class="fas fa-align-left primary-text fs-4 me-3" id="menu-toggle"></i>
+                </div>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-success fw-bold" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fas fa-user me-2"></i>Manager
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="profile.html">Profile</a></li>
+                                <li><a class="dropdown-item" href="settings.html">Settings</a></li>
+                                <li><a class="dropdown-item" href="login.html">Logout</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="container rounded bg-white mt-5 mb-5 w-75 p-3">
+                <div class="row">
+
+                    <div class="col-md-5 border-right">
+                        <div class="p-3 py-5">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <h4 class="text-success"> Settings</h4>
+                            </div>
+
+                            <div class="row mt-3">
+                                <div class="col-md-12"><label class="labels">Restaurant Name</label><input type="text" class="form-control" placeholder="Restaurant Name" value=""></div>
+                                <div class="col-md-12"><label class="labels">Restaurant Contact No.</label><input type="text" class="form-control" placeholder="Restaurant Contact No." value=""></div>
+                                <div class="col-md-12"><label class="labels">Restaurant Address</label><input type="text" class="form-control" placeholder="Restaurant Address" value=""></div>
+
+                                <div class="col-md-12"><label class="labels">Restaurant Email</label><input type="text" class="form-control" placeholder="Restaurant Email" value=""></div>
+
+                            </div>
+
+                            <div class="mt-5 text-center"><button class="btn-success profile-button" type="button">Save Settings</button></div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 pt-5">
+                        <div class="p-3 py-5">
+                            <div class="col-md-12"><label class="labels">Tag Line</label><input type="text" class="form-control" placeholder="Tag Line" value=""></div>
+
+                            <div class="col-md-12">
+                                <label class="labels">currency</label>
+                                <select class="form-select" aria-label="Default select example" id="currency" name="currency">
+                                <option value="AFN">AFN - Afghan Afghani</option>
+                                <option value="ALL">ALL - Albanian Lek</option>
+                                <option value="DZD">DZD - Algerian Dinar</option>
+                                <option value="AOA">AOA - Angolan Kwanza</option>
+                                <option value="ARS">ARS - Argentine Peso</option>
+                                <option value="AMD">AMD - Armenian Dram</option>
+                                <option value="AWG">AWG - Aruban Florin</option>
+                                <option value="AUD">AUD - Australian Dollar</option>
+                                <option value="AZN">AZN - Azerbaijani Manat</option>
+                                <option value="BSD">BSD - Bahamian Dollar</option>
+                                <option value="BHD">BHD - Bahraini Dinar</option>
+                                <option value="BDT">BDT - Bangladeshi Taka</option>
+                                <option value="BBD">BBD - Barbadian Dollar</option>
+                                <option value="BYR">BYR - Belarusian Ruble</option>
+                                <option value="BEF">BEF - Belgian Franc</option>
+                                <option value="BZD">BZD - Belize Dollar</option>
+                                <option value="BMD">BMD - Bermudan Dollar</option>
+                                <option value="BTN">BTN - Bhutanese Ngultrum</option>
+                                <option value="BTC">BTC - Bitcoin</option>
+                                <option value="BOB">BOB - Bolivian Boliviano</option>
+                                <option value="BAM">BAM - Bosnia-Herzegovina Convertible Mark</option>
+                                <option value="BWP">BWP - Botswanan Pula</option>
+                                <option value="BRL">BRL - Brazilian Real</option>
+                                <option value="GBP">GBP - British Pound Sterling</option>
+                                <option value="BND">BND - Brunei Dollar</option>
+                                <option value="BGN">BGN - Bulgarian Lev</option>
+                                <option value="BIF">BIF - Burundian Franc</option>
+                                <option value="KHR">KHR - Cambodian Riel</option>
+                                <option value="CAD">CAD - Canadian Dollar</option>
+                                <option value="CVE">CVE - Cape Verdean Escudo</option>
+                                <option value="KYD">KYD - Cayman Islands Dollar</option>
+                                <option value="XOF">XOF - CFA Franc BCEAO</option>
+                                <option value="XAF">XAF - CFA Franc BEAC</option>
+                                <option value="XPF">XPF - CFP Franc</option>
+                                <option value="CLP">CLP - Chilean Peso</option>
+                                <option value="CNY">CNY - Chinese Yuan</option>
+                                <option value="COP">COP - Colombian Peso</option>
+                                <option value="KMF">KMF - Comorian Franc</option>
+                                <option value="CDF">CDF - Congolese Franc</option>
+                                <option value="CRC">CRC - Costa Rican ColÃ³n</option>
+                                <option value="HRK">HRK - Croatian Kuna</option>
+                                <option value="CUC">CUC - Cuban Convertible Peso</option>
+                                <option value="CZK">CZK - Czech Republic Koruna</option>
+                                <option value="DKK">DKK - Danish Krone</option>
+                                <option value="DJF">DJF - Djiboutian Franc</option>
+                                <option value="DOP">DOP - Dominican Peso</option>
+                                <option value="XCD">XCD - East Caribbean Dollar</option>
+                                <option value="EGP">EGP - Egyptian Pound</option>
+                                <option value="ERN">ERN - Eritrean Nakfa</option>
+                                <option value="EEK">EEK - Estonian Kroon</option>
+                                <option value="ETB">ETB - Ethiopian Birr</option>
+                                <option value="EUR">EUR - Euro</option>
+                                <option value="FKP">FKP - Falkland Islands Pound</option>
+                                <option value="FJD">FJD - Fijian Dollar</option>
+                                <option value="GMD">GMD - Gambian Dalasi</option>
+                                <option value="GEL">GEL - Georgian Lari</option>
+                                <option value="DEM">DEM - German Mark</option>
+                                <option value="GHS">GHS - Ghanaian Cedi</option>
+                                <option value="GIP">GIP - Gibraltar Pound</option>
+                                <option value="GRD">GRD - Greek Drachma</option>
+                                <option value="GTQ">GTQ - Guatemalan Quetzal</option>
+                                <option value="GNF">GNF - Guinean Franc</option>
+                                <option value="GYD">GYD - Guyanaese Dollar</option>
+                                <option value="HTG">HTG - Haitian Gourde</option>
+                                <option value="HNL">HNL - Honduran Lempira</option>
+                                <option value="HKD">HKD - Hong Kong Dollar</option>
+                                <option value="HUF">HUF - Hungarian Forint</option>
+                                <option value="ISK">ISK - Icelandic KrÃ³na</option>
+                                <option value="INR">INR - Indian Rupee</option>
+                                <option value="IDR">IDR - Indonesian Rupiah</option>
+                                <option value="IRR">IRR - Iranian Rial</option>
+                                <option value="IQD">IQD - Iraqi Dinar</option>
+                                <option value="ILS">ILS - Israeli New Sheqel</option>
+                                <option value="ITL">ITL - Italian Lira</option>
+                                <option value="JMD">JMD - Jamaican Dollar</option>
+                                <option value="JPY">JPY - Japanese Yen</option>
+                                <option value="JOD">JOD - Jordanian Dinar</option>
+                                <option value="KZT">KZT - Kazakhstani Tenge</option>
+                                <option value="KES">KES - Kenyan Shilling</option>
+                                <option value="KWD">KWD - Kuwaiti Dinar</option>
+                                <option value="KGS">KGS - Kyrgystani Som</option>
+                                <option value="LAK">LAK - Laotian Kip</option>
+                                <option value="LVL">LVL - Latvian Lats</option>
+                                <option value="LBP">LBP - Lebanese Pound</option>
+                                <option value="LSL">LSL - Lesotho Loti</option>
+                                <option value="LRD">LRD - Liberian Dollar</option>
+                                <option value="LYD">LYD - Libyan Dinar</option>
+                                <option value="LTL">LTL - Lithuanian Litas</option>
+                                <option value="MOP">MOP - Macanese Pataca</option>
+                                <option value="MKD">MKD - Macedonian Denar</option>
+                                <option value="MGA">MGA - Malagasy Ariary</option>
+                                <option value="MWK">MWK - Malawian Kwacha</option>
+                                <option value="MYR">MYR - Malaysian Ringgit</option>
+                                <option value="MVR">MVR - Maldivian Rufiyaa</option>
+                                <option value="MRO">MRO - Mauritanian Ouguiya</option>
+                                <option value="MUR">MUR - Mauritian Rupee</option>
+                                <option value="MXN">MXN - Mexican Peso</option>
+                                <option value="MDL">MDL - Moldovan Leu</option>
+                                <option value="MNT">MNT - Mongolian Tugrik</option>
+                                <option value="MAD">MAD - Moroccan Dirham</option>
+                                <option value="MZM">MZM - Mozambican Metical</option>
+                                <option value="MMK">MMK - Myanmar Kyat</option>
+                                <option value="NAD">NAD - Namibian Dollar</option>
+                                <option value="NPR">NPR - Nepalese Rupee</option>
+                                <option value="ANG">ANG - Netherlands Antillean Guilder</option>
+                                <option value="TWD">TWD - New Taiwan Dollar</option>
+                                <option value="NZD">NZD - New Zealand Dollar</option>
+                                <option value="NIO">NIO - Nicaraguan CÃ³rdoba</option>
+                                <option value="NGN">NGN - Nigerian Naira</option>
+                                <option value="KPW">KPW - North Korean Won</option>
+                                <option value="NOK">NOK - Norwegian Krone</option>
+                                <option value="OMR">OMR - Omani Rial</option>
+                                <option value="PKR">PKR - Pakistani Rupee</option>
+                                <option value="PAB">PAB - Panamanian Balboa</option>
+                                <option value="PGK">PGK - Papua New Guinean Kina</option>
+                                <option value="PYG">PYG - Paraguayan Guarani</option>
+                                <option value="PEN">PEN - Peruvian Nuevo Sol</option>
+                                <option value="PHP">PHP - Philippine Peso</option>
+                                <option value="PLN">PLN - Polish Zloty</option>
+                                <option value="QAR">QAR - Qatari Rial</option>
+                                <option value="RON">RON - Romanian Leu</option>
+                                <option value="RUB">RUB - Russian Ruble</option>
+                                <option value="RWF">RWF - Rwandan Franc</option>
+                                <option value="SVC">SVC - Salvadoran ColÃ³n</option>
+                                <option value="WST">WST - Samoan Tala</option>
+                                <option value="SAR">SAR - Saudi Riyal</option>
+                                <option value="RSD">RSD - Serbian Dinar</option>
+                                <option value="SCR">SCR - Seychellois Rupee</option>
+                                <option value="SLL">SLL - Sierra Leonean Leone</option>
+                                <option value="SGD">SGD - Singapore Dollar</option>
+                                <option value="SKK">SKK - Slovak Koruna</option>
+                                <option value="SBD">SBD - Solomon Islands Dollar</option>
+                                <option value="SOS">SOS - Somali Shilling</option>
+                                <option value="ZAR">ZAR - South African Rand</option>
+                                <option value="KRW">KRW - South Korean Won</option>
+                                <option value="XDR">XDR - Special Drawing Rights</option>
+                                <option value="LKR">LKR - Sri Lankan Rupee</option>
+                                <option value="SHP">SHP - St. Helena Pound</option>
+                                <option value="SDG">SDG - Sudanese Pound</option>
+                                <option value="SRD">SRD - Surinamese Dollar</option>
+                                <option value="SZL">SZL - Swazi Lilangeni</option>
+                                <option value="SEK">SEK - Swedish Krona</option>
+                                <option value="CHF">CHF - Swiss Franc</option>
+                                <option value="SYP">SYP - Syrian Pound</option>
+                                <option value="STD">STD - São Tomé and Príncipe Dobra</option>
+                                <option value="TJS">TJS - Tajikistani Somoni</option>
+                                <option value="TZS">TZS - Tanzanian Shilling</option>
+                                <option value="THB">THB - Thai Baht</option>
+                                <option value="TOP">TOP - Tongan pa'anga</option>
+                                <option value="TTD">TTD - Trinidad & Tobago Dollar</option>
+                                <option value="TND">TND - Tunisian Dinar</option>
+                                <option value="TRY">TRY - Turkish Lira</option>
+                                <option value="TMT">TMT - Turkmenistani Manat</option>
+                                <option value="UGX">UGX - Ugandan Shilling</option>
+                                <option value="UAH">UAH - Ukrainian Hryvnia</option>
+                                <option value="AED">AED - United Arab Emirates Dirham</option>
+                                <option value="UYU">UYU - Uruguayan Peso</option>
+                                <option value="USD">USD - US Dollar</option>
+                                <option value="UZS">UZS - Uzbekistan Som</option>
+                                <option value="VUV">VUV - Vanuatu Vatu</option>
+                                <option value="VEF">VEF - Venezuelan BolÃ­var</option>
+                                <option value="VND">VND - Vietnamese Dong</option>
+                                <option value="YER">YER - Yemeni Rial</option>
+                                <option value="ZMK">ZMK - Zambian Kwacha</option>
+                            </select>
+                            </div>
+
+                            <div class="col-md-12">
+                                <label class="labels">time zone</label>
+                                <select class="form-select" aria-label="Default select example">
+                            <option timeZoneId="1" gmtAdjustment="GMT-12:00" useDaylightTime="0" value="-12">(GMT-12:00) International Date Line West</option>
+                            <option timeZoneId="2" gmtAdjustment="GMT-11:00" useDaylightTime="0" value="-11">(GMT-11:00) Midway Island, Samoa</option>
+                            <option timeZoneId="3" gmtAdjustment="GMT-10:00" useDaylightTime="0" value="-10">(GMT-10:00) Hawaii</option>
+                            <option timeZoneId="4" gmtAdjustment="GMT-09:00" useDaylightTime="1" value="-9">(GMT-09:00) Alaska</option>
+                            <option timeZoneId="5" gmtAdjustment="GMT-08:00" useDaylightTime="1" value="-8">(GMT-08:00) Pacific Time (US & Canada)</option>
+                            <option timeZoneId="6" gmtAdjustment="GMT-08:00" useDaylightTime="1" value="-8">(GMT-08:00) Tijuana, Baja California</option>
+                            <option timeZoneId="7" gmtAdjustment="GMT-07:00" useDaylightTime="0" value="-7">(GMT-07:00) Arizona</option>
+                            <option timeZoneId="8" gmtAdjustment="GMT-07:00" useDaylightTime="1" value="-7">(GMT-07:00) Chihuahua, La Paz, Mazatlan</option>
+                            <option timeZoneId="9" gmtAdjustment="GMT-07:00" useDaylightTime="1" value="-7">(GMT-07:00) Mountain Time (US & Canada)</option>
+                            <option timeZoneId="10" gmtAdjustment="GMT-06:00" useDaylightTime="0" value="-6">(GMT-06:00) Central America</option>
+                            <option timeZoneId="11" gmtAdjustment="GMT-06:00" useDaylightTime="1" value="-6">(GMT-06:00) Central Time (US & Canada)</option>
+                            <option timeZoneId="12" gmtAdjustment="GMT-06:00" useDaylightTime="1" value="-6">(GMT-06:00) Guadalajara, Mexico City, Monterrey</option>
+                            <option timeZoneId="13" gmtAdjustment="GMT-06:00" useDaylightTime="0" value="-6">(GMT-06:00) Saskatchewan</option>
+                            <option timeZoneId="14" gmtAdjustment="GMT-05:00" useDaylightTime="0" value="-5">(GMT-05:00) Bogota, Lima, Quito, Rio Branco</option>
+                            <option timeZoneId="15" gmtAdjustment="GMT-05:00" useDaylightTime="1" value="-5">(GMT-05:00) Eastern Time (US & Canada)</option>
+                            <option timeZoneId="16" gmtAdjustment="GMT-05:00" useDaylightTime="1" value="-5">(GMT-05:00) Indiana (East)</option>
+                            <option timeZoneId="17" gmtAdjustment="GMT-04:00" useDaylightTime="1" value="-4">(GMT-04:00) Atlantic Time (Canada)</option>
+                            <option timeZoneId="18" gmtAdjustment="GMT-04:00" useDaylightTime="0" value="-4">(GMT-04:00) Caracas, La Paz</option>
+                            <option timeZoneId="19" gmtAdjustment="GMT-04:00" useDaylightTime="0" value="-4">(GMT-04:00) Manaus</option>
+                            <option timeZoneId="20" gmtAdjustment="GMT-04:00" useDaylightTime="1" value="-4">(GMT-04:00) Santiago</option>
+                            <option timeZoneId="21" gmtAdjustment="GMT-03:30" useDaylightTime="1" value="-3.5">(GMT-03:30) Newfoundland</option>
+                            <option timeZoneId="22" gmtAdjustment="GMT-03:00" useDaylightTime="1" value="-3">(GMT-03:00) Brasilia</option>
+                            <option timeZoneId="23" gmtAdjustment="GMT-03:00" useDaylightTime="0" value="-3">(GMT-03:00) Buenos Aires, Georgetown</option>
+                            <option timeZoneId="24" gmtAdjustment="GMT-03:00" useDaylightTime="1" value="-3">(GMT-03:00) Greenland</option>
+                            <option timeZoneId="25" gmtAdjustment="GMT-03:00" useDaylightTime="1" value="-3">(GMT-03:00) Montevideo</option>
+                            <option timeZoneId="26" gmtAdjustment="GMT-02:00" useDaylightTime="1" value="-2">(GMT-02:00) Mid-Atlantic</option>
+                            <option timeZoneId="27" gmtAdjustment="GMT-01:00" useDaylightTime="0" value="-1">(GMT-01:00) Cape Verde Is.</option>
+                            <option timeZoneId="28" gmtAdjustment="GMT-01:00" useDaylightTime="1" value="-1">(GMT-01:00) Azores</option>
+                            <option timeZoneId="29" gmtAdjustment="GMT+00:00" useDaylightTime="0" value="0">(GMT+00:00) Casablanca, Monrovia, Reykjavik</option>
+                            <option timeZoneId="30" gmtAdjustment="GMT+00:00" useDaylightTime="1" value="0">(GMT+00:00) Greenwich Mean Time : Dublin, Edinburgh, Lisbon, London</option>
+                            <option timeZoneId="31" gmtAdjustment="GMT+01:00" useDaylightTime="1" value="1">(GMT+01:00) Amsterdam, Berlin, Bern, Rome, Stockholm, Vienna</option>
+                            <option timeZoneId="32" gmtAdjustment="GMT+01:00" useDaylightTime="1" value="1">(GMT+01:00) Belgrade, Bratislava, Budapest, Ljubljana, Prague</option>
+                            <option timeZoneId="33" gmtAdjustment="GMT+01:00" useDaylightTime="1" value="1">(GMT+01:00) Brussels, Copenhagen, Madrid, Paris</option>
+                            <option timeZoneId="34" gmtAdjustment="GMT+01:00" useDaylightTime="1" value="1">(GMT+01:00) Sarajevo, Skopje, Warsaw, Zagreb</option>
+                            <option timeZoneId="35" gmtAdjustment="GMT+01:00" useDaylightTime="1" value="1">(GMT+01:00) West Central Africa</option>
+                            <option timeZoneId="36" gmtAdjustment="GMT+02:00" useDaylightTime="1" value="2">(GMT+02:00) Amman</option>
+                            <option timeZoneId="37" gmtAdjustment="GMT+02:00" useDaylightTime="1" value="2">(GMT+02:00) Athens, Bucharest, Istanbul</option>
+                            <option timeZoneId="38" gmtAdjustment="GMT+02:00" useDaylightTime="1" value="2">(GMT+02:00) Beirut</option>
+                            <option timeZoneId="39" gmtAdjustment="GMT+02:00" useDaylightTime="1" value="2">(GMT+02:00) Cairo</option>
+                            <option timeZoneId="40" gmtAdjustment="GMT+02:00" useDaylightTime="0" value="2">(GMT+02:00) Harare, Pretoria</option>
+                            <option timeZoneId="41" gmtAdjustment="GMT+02:00" useDaylightTime="1" value="2">(GMT+02:00) Helsinki, Kyiv, Riga, Sofia, Tallinn, Vilnius</option>
+                            <option timeZoneId="42" gmtAdjustment="GMT+02:00" useDaylightTime="1" value="2">(GMT+02:00) Jerusalem</option>
+                            <option timeZoneId="43" gmtAdjustment="GMT+02:00" useDaylightTime="1" value="2">(GMT+02:00) Minsk</option>
+                            <option timeZoneId="44" gmtAdjustment="GMT+02:00" useDaylightTime="1" value="2">(GMT+02:00) Windhoek</option>
+                            <option timeZoneId="45" gmtAdjustment="GMT+03:00" useDaylightTime="0" value="3">(GMT+03:00) Kuwait, Riyadh, Baghdad</option>
+                            <option timeZoneId="46" gmtAdjustment="GMT+03:00" useDaylightTime="1" value="3">(GMT+03:00) Moscow, St. Petersburg, Volgograd</option>
+                            <option timeZoneId="47" gmtAdjustment="GMT+03:00" useDaylightTime="0" value="3">(GMT+03:00) Nairobi</option>
+                            <option timeZoneId="48" gmtAdjustment="GMT+03:00" useDaylightTime="0" value="3">(GMT+03:00) Tbilisi</option>
+                            <option timeZoneId="49" gmtAdjustment="GMT+03:30" useDaylightTime="1" value="3.5">(GMT+03:30) Tehran</option>
+                            <option timeZoneId="50" gmtAdjustment="GMT+04:00" useDaylightTime="0" value="4">(GMT+04:00) Abu Dhabi, Muscat</option>
+                            <option timeZoneId="51" gmtAdjustment="GMT+04:00" useDaylightTime="1" value="4">(GMT+04:00) Baku</option>
+                            <option timeZoneId="52" gmtAdjustment="GMT+04:00" useDaylightTime="1" value="4">(GMT+04:00) Yerevan</option>
+                            <option timeZoneId="53" gmtAdjustment="GMT+04:30" useDaylightTime="0" value="4.5">(GMT+04:30) Kabul</option>
+                            <option timeZoneId="54" gmtAdjustment="GMT+05:00" useDaylightTime="1" value="5">(GMT+05:00) Yekaterinburg</option>
+                            <option timeZoneId="55" gmtAdjustment="GMT+05:00" useDaylightTime="0" value="5">(GMT+05:00) Islamabad, Karachi, Tashkent</option>
+                            <option timeZoneId="56" gmtAdjustment="GMT+05:30" useDaylightTime="0" value="5.5">(GMT+05:30) Sri Jayawardenapura</option>
+                            <option timeZoneId="57" gmtAdjustment="GMT+05:30" useDaylightTime="0" value="5.5">(GMT+05:30) Chennai, Kolkata, Mumbai, New Delhi</option>
+                            <option timeZoneId="58" gmtAdjustment="GMT+05:45" useDaylightTime="0" value="5.75">(GMT+05:45) Kathmandu</option>
+                            <option timeZoneId="59" gmtAdjustment="GMT+06:00" useDaylightTime="1" value="6">(GMT+06:00) Almaty, Novosibirsk</option>
+                            <option timeZoneId="60" gmtAdjustment="GMT+06:00" useDaylightTime="0" value="6">(GMT+06:00) Astana, Dhaka</option>
+                            <option timeZoneId="61" gmtAdjustment="GMT+06:30" useDaylightTime="0" value="6.5">(GMT+06:30) Yangon (Rangoon)</option>
+                            <option timeZoneId="62" gmtAdjustment="GMT+07:00" useDaylightTime="0" value="7">(GMT+07:00) Bangkok, Hanoi, Jakarta</option>
+                            <option timeZoneId="63" gmtAdjustment="GMT+07:00" useDaylightTime="1" value="7">(GMT+07:00) Krasnoyarsk</option>
+                            <option timeZoneId="64" gmtAdjustment="GMT+08:00" useDaylightTime="0" value="8">(GMT+08:00) Beijing, Chongqing, Hong Kong, Urumqi</option>
+                            <option timeZoneId="65" gmtAdjustment="GMT+08:00" useDaylightTime="0" value="8">(GMT+08:00) Kuala Lumpur, Singapore</option>
+                            <option timeZoneId="66" gmtAdjustment="GMT+08:00" useDaylightTime="0" value="8">(GMT+08:00) Irkutsk, Ulaan Bataar</option>
+                            <option timeZoneId="67" gmtAdjustment="GMT+08:00" useDaylightTime="0" value="8">(GMT+08:00) Perth</option>
+                            <option timeZoneId="68" gmtAdjustment="GMT+08:00" useDaylightTime="0" value="8">(GMT+08:00) Taipei</option>
+                            <option timeZoneId="69" gmtAdjustment="GMT+09:00" useDaylightTime="0" value="9">(GMT+09:00) Osaka, Sapporo, Tokyo</option>
+                            <option timeZoneId="70" gmtAdjustment="GMT+09:00" useDaylightTime="0" value="9">(GMT+09:00) Seoul</option>
+                            <option timeZoneId="71" gmtAdjustment="GMT+09:00" useDaylightTime="1" value="9">(GMT+09:00) Yakutsk</option>
+                            <option timeZoneId="72" gmtAdjustment="GMT+09:30" useDaylightTime="0" value="9.5">(GMT+09:30) Adelaide</option>
+                            <option timeZoneId="73" gmtAdjustment="GMT+09:30" useDaylightTime="0" value="9.5">(GMT+09:30) Darwin</option>
+                            <option timeZoneId="74" gmtAdjustment="GMT+10:00" useDaylightTime="0" value="10">(GMT+10:00) Brisbane</option>
+                            <option timeZoneId="75" gmtAdjustment="GMT+10:00" useDaylightTime="1" value="10">(GMT+10:00) Canberra, Melbourne, Sydney</option>
+                            <option timeZoneId="76" gmtAdjustment="GMT+10:00" useDaylightTime="1" value="10">(GMT+10:00) Hobart</option>
+                            <option timeZoneId="77" gmtAdjustment="GMT+10:00" useDaylightTime="0" value="10">(GMT+10:00) Guam, Port Moresby</option>
+                            <option timeZoneId="78" gmtAdjustment="GMT+10:00" useDaylightTime="1" value="10">(GMT+10:00) Vladivostok</option>
+                            <option timeZoneId="79" gmtAdjustment="GMT+11:00" useDaylightTime="1" value="11">(GMT+11:00) Magadan, Solomon Is., New Caledonia</option>
+                            <option timeZoneId="80" gmtAdjustment="GMT+12:00" useDaylightTime="1" value="12">(GMT+12:00) Auckland, Wellington</option>
+                            <option timeZoneId="81" gmtAdjustment="GMT+12:00" useDaylightTime="0" value="12">(GMT+12:00) Fiji, Kamchatka, Marshall Is.</option>
+                            <option timeZoneId="82" gmtAdjustment="GMT+13:00" useDaylightTime="0" value="13">(GMT+13:00) Nuku'alofa</option>
+                        </select>
+                            </div>
+
+                            <div class="col-md-12">
+                                <label class="labels">Select Logo</label>
+                                <form action="/action_page.php">
+                                    <input type="file" id="myFile" name="filename">
+                                </form>
+                                <label class="labels">Only .jpg, .png file allowed for upload</label>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        var el = document.getElementById("wrapper");
+        var toggleButton = document.getElementById("menu-toggle");
+
+        toggleButton.onclick = function() {
+            el.classList.toggle("toggled");
+        };
+    </script>
+</body>
+
+</html>
